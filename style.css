@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(165, 130, 167);
+  background: linear-gradient(
+    90deg,
+    rgba(165, 130, 167, 1) 0%,
+    rgba(112, 153, 208, 1) 83%
+  );
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container button {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid white;
+}
+
+.container button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.output {
+  grid-column: 1 /-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.previous {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.current {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
+}
